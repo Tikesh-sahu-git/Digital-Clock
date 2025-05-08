@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Digital Clock</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="clock-container">
+        <div class="clock-header">
+            <h1>Advanced Digital Clock</h1>
+            <div class="controls">
+                <div class="timezone-selector">
+                    <label for="timezone">Timezone:</label>
+                    <select id="timezone">
+                        <option value="local">Local Time</option>
+                        <option value="UTC">UTC</option>
+                        <option value="America/New_York">New York</option>
+                        <option value="Europe/London">London</option>
+                        <option value="Asia/Tokyo">Tokyo</option>
+                        <option value="Australia/Sydney">Sydney</option>
+                    </select>
+                </div>
+                <div class="theme-selector">
+                    <label>Theme:</label>
+                    <button class="theme-btn light" data-theme="light"><i class="fas fa-sun"></i></button>
+                    <button class="theme-btn dark" data-theme="dark"><i class="fas fa-moon"></i></button>
+                    <button class="theme-btn blue" data-theme="blue"><i class="fas fa-cloud"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="clock-display">
+            <div class="time">
+                <span class="hours">00</span>
+                <span class="colon">:</span>
+                <span class="minutes">00</span>
+                <span class="colon">:</span>
+                <span class="seconds">00</span>
+                <span class="ampm">AM</span>
+            </div>
+            <div class="date">
+                <span class="weekday">Monday</span>,
+                <span class="month">January</span>
+                <span class="day">1</span>,
+                <span class="year">2023</span>
+            </div>
+            <div class="additional-info">
+                <div class="timezone-info">Timezone: Local</div>
+                <div class="day-progress">
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <span class="progress-text">0% of day passed</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="clock-footer">
+            <button id="toggle-seconds">Toggle Seconds</button>
+            <button id="toggle-military">Toggle 24-hour Format</button>
+            <button id="toggle-analog">Show Analog Clock</button>
+        </div>
+    </div>
+
+    <div class="analog-clock-container hidden">
+        <div class="analog-clock">
+            <div class="hour-hand"></div>
+            <div class="minute-hand"></div>
+            <div class="second-hand"></div>
+            <div class="center-circle"></div>
+            <div class="number number1">1</div>
+            <div class="number number2">2</div>
+            <div class="number number3">3</div>
+            <div class="number number4">4</div>
+            <div class="number number5">5</div>
+            <div class="number number6">6</div>
+            <div class="number number7">7</div>
+            <div class="number number8">8</div>
+            <div class="number number9">9</div>
+            <div class="number number10">10</div>
+            <div class="number number11">11</div>
+            <div class="number number12">12</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
